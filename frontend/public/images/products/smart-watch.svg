@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#b45309"/>
+  <rect x="215" y="95" width="50" height="50" rx="8" fill="#92400e"/>
+  <rect x="215" y="255" width="50" height="50" rx="8" fill="#92400e"/>
+  <rect x="335" y="95" width="50" height="50" rx="8" fill="#92400e"/>
+  <rect x="335" y="255" width="50" height="50" rx="8" fill="#92400e"/>
+  <circle cx="300" cy="200" r="75" fill="#78350f"/>
+  <circle cx="300" cy="200" r="58" fill="#451a03"/>
+  <text x="300" y="210" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="20" fill="#fbbf24">10:42</text>
+  <text x="300" y="360" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="26" font-weight="600" fill="#fff">Smart Watch</text>
+</svg>

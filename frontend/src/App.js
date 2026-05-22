@@ -1,26 +1,31 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import "./styles/custom.css";
 
 function App() {
-
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>E-Commerce Store</h1>
-
-      {products.map((product) => (
-        <div key={product.id}>
-          <h3>{product.name}</h3>
-          <p>₹{product.price}</p>
+    <CartProvider>
+      <BrowserRouter>
+        <div className="app-wrapper">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </main>
+          <Footer />
         </div>
-      ))}
-    </div>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
