@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <Hero
-        title="Welcome to ShopDev123"
+        title="Welcome to ShopDev"
         subtitle="Discover quality electronics and accessories at great prices. Built as a DevOps portfolio e-commerce demo."
       />
 
